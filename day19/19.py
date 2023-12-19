@@ -1,8 +1,12 @@
-f = open('input.txt', 'r')
+from itertools import product
+
+
+f = open('test.txt', 'r')
 input = f.read()
 workflows, ratings = input.split('\n\n')
 workflows = workflows.split('\n')
 ratings = ratings.split('\n')
+
 
 def parseWorkflows(workflows):
     workflowDict = {}
@@ -48,6 +52,17 @@ def solveOne(ratings):
     return total
 
 print(solveOne(ratings))
+
+# testTotal = 0
+# for index in range(1,4001):
+#     print(index)
+#     # ratingDict = {'x': index, 'm': index, 'a': index, 's': index}
+#     # if(isAccepted(ratingDict)):
+#     #     testTotal += 1
+# print(testTotal)
+
+
+
 
 
 
