@@ -15,10 +15,10 @@ def transformColGrid(grid):
 
 def getReflectionNum(grid):
     for column in range(1, len(grid[0])):
-        spit = min(column, len(grid[0])-column)
+        distance = min(column, len(grid[0])-column)
         reflection = True
         for line in grid:
-            if line[column-spit:column] != line[column:column+spit][::-1]:
+            if line[column-distance:column] != line[column:column+distance][::-1]:
                 reflection = False
                 break
         if reflection:
